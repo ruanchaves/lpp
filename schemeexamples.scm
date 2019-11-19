@@ -13,3 +13,7 @@
 (nota 3)
 (nota 5)
 (nota 7)
+(define media (lambda (a b c) (nota (/ (+ a b c) 3))) )
+(media 5 5 6)
+(media 6 6 6)
+(media 6 0 10)
