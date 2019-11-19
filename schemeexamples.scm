@@ -24,7 +24,7 @@
 (media 6 6 6)
 (media 6 0 10)
 
-; Crie uma função que retorne o 3º elemento da lista
+; Crie uma função que retorne o 3o elemento da lista
 (define terceiro (lambda (L) (caddr L)))
 (terceiro '(1 2 3))
 
@@ -37,3 +37,13 @@
 (define insere23 (lambda (x L) (cons (car L) (cons x (cons x (cddr L) )) )))
 (insere23 8 '(1 2 3 4 5 6 7) )
 
+;Construa uma função que receba uma lista de alunos com nome e nota, e retorna o
+;nome dos alunos aprovados (nota >= 6.0)
+
+(define Alunos '( ("A" 6.0) ("B" 2.5) ("C" 3.5) ("D" 8)))
+; (aprovados Alunos) -> ("A" "D")
+
+(define test (lambda (e) (>= (cadr e) 6 ) ))
+(define select (lambda (e) (car e)))
+(define aprovados (lambda (x) (map select (filter test x))))
+(aprovados Alunos)
