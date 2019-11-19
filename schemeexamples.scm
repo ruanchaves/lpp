@@ -1,3 +1,5 @@
+#lang racket
+
 ; crie uma função que calcula a área de um trapézio
 (define area (lambda (h b bb) (* h (/ (+ b bb) 2) ) ))
 (area 2 4 6)
