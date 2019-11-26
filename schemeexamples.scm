@@ -58,3 +58,18 @@
 
 (soma L)
 
+;Conte os zeros em uma lista
+(define L '(3 5 0 2 0 7 9 0 4))
+(define contazero
+  (lambda (L)
+    (if (null? L)
+        0
+        (if (zero? (car L))
+            (+ 1 (contazero (cdr L)))
+            (contazero (cdr L))
+        )
+    )
+  )
+)
+
+(contazero L)
