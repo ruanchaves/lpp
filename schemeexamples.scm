@@ -95,3 +95,15 @@
 
 (soma-fat 5)
 
+; Filtrar os numeros impares para fora de uma lista
+
+#lang racket
+
+(define L '(4 5 8 2 12 83 5) )
+(define pares
+  (lambda (L)
+    (filter even? L)
+    )
+  )
+
+(pares L)
