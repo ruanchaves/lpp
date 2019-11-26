@@ -47,3 +47,14 @@
 (define select (lambda (e) (car e)))
 (define aprovados (lambda (x) (map select (filter test x))))
 (aprovados Alunos)
+
+; Faça a função soma a qual recebe uma lista com números de 0 a 9 e retorna a soma deles
+(define L '(3 5 0 2 0 7))
+(define soma
+  (lambda (L)
+    (if (null? L)
+        0
+        (+ (car L) (soma (cdr L))))))
+
+(soma L)
+
