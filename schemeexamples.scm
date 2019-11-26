@@ -73,3 +73,25 @@
 )
 
 (contazero L)
+
+; Faça a função que soma os fatoriais: soma-fat(5) = 5! + 4! + ... + 1!
+(define fatorial
+  (lambda (n)
+    (if (zero? n)
+        1
+        (* n (fatorial (- n 1)) )
+    )
+  )
+)
+
+(define soma-fat
+  (lambda (n)
+    (if (= n 1)
+        1
+        (+ (fatorial n) (soma-fat (- n 1)) ) 
+    )
+  )
+)
+
+(soma-fat 5)
+
