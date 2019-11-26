@@ -107,3 +107,29 @@
   )
 
 (pares L)
+
+
+; Filtre elementos maiores que n em uma lista
+
+#lang racket
+
+(define maior
+  (lambda (n L )
+    (filter (lambda (e) (> e n) ) L )
+    )
+)
+
+(maior 3 '(1 2 3 4 5 6))
+; Faça a função concatena para duas listas
+
+
+(define concatena
+  (lambda (a b)
+    (if (null? a)
+        b
+        (cons (car a) (concatena (cdr a) b))
+    )
+  )
+)
+
+(concatena '(1 2) '(3 4))
